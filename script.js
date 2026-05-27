@@ -1,16 +1,51 @@
-const cards = document.querySelectorAll('.card');
+window.addEventListener("load", () => {
 
-window.addEventListener('scroll', () => {
+document.getElementById("loader").style.display = "none";
 
-cards.forEach(card => {
+});
 
-const cardTop = card.getBoundingClientRect().top;
+const counters = document.querySelectorAll('.counter');
 
-if(cardTop < window.innerHeight - 100){
-card.style.opacity = "1";
-card.style.transform = "translateY(0)";
+counters.forEach(counter => {
+
+counter.innerText = '0';
+
+const updateCounter = () => {
+
+const target = +counter.getAttribute('data-target');
+
+const c = +counter.innerText;
+
+const increment = target / 100;
+
+if(c < target){
+
+counter.innerText = `${Math.ceil(c + increment)}`;
+
+setTimeout(updateCounter, 30);
+
+}else{
+
+counter.innerText = target + "%";
+
 }
 
-});
+};
+
+updateCounter();
 
 });
+
+function correct(){
+
+document.getElementById("result").innerHTML =
+"✅ Correto! A irrigação inteligente economiza água.";
+
+}
+
+function wrong(){
+
+document.getElementById("result").innerHTML =
+"❌ Resposta incorreta. Tente novamente.";
+
+}
