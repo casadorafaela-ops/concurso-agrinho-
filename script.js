@@ -61,3 +61,39 @@ score -= 5;
 document.getElementById("score").innerHTML = score;
 
 }
+async function getWeather(){
+
+const apiKey = "SUA_API_KEY";
+
+const city = "Curitiba";
+
+const url =
+`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`;
+
+try{
+
+const response = await fetch(url);
+
+const data = await response.json();
+
+document.getElementById("temp").innerHTML =
+Math.round(data.main.temp) + " °C";
+
+document.getElementById("humidity").innerHTML =
+data.main.humidity + "%";
+
+document.getElementById("weather").innerHTML =
+data.weather[0].description;
+
+document.getElementById("wind").innerHTML =
+Math.round(data.wind.speed * 3.6) + " km/h";
+
+}catch(error){
+
+console.log("Erro ao carregar clima");
+
+}
+
+}
+
+getWeather();
