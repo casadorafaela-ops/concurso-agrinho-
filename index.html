@@ -1,47 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agro do Futuro | Agrinho 2026</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"/>
 
-<title>Agro do Futuro</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 
-<link rel="stylesheet" href="style.css">
-
-<link
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-rel="stylesheet"
-/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
 <header>
 
 <nav>
 
-<h2 class="logo">AGRO FUTURO</h2>
+<h1 class="logo">AGRO FUTURO</h1>
 
 <ul>
 <li><a href="#sobre">Sobre</a></li>
-<li><a href="#tecnologia">Tecnologia</a></li>
+<li><a href="#tecnologias">Tecnologias</a></li>
 <li><a href="#sustentabilidade">Sustentabilidade</a></li>
+<li><a href="#galeria">Galeria</a></li>
 <li><a href="#videos">Vídeos</a></li>
+<li><a href="#quiz">Quiz</a></li>
 </ul>
 
 </nav>
 
 <div class="hero">
 
-<h1>O FUTURO DO AGRO É SUSTENTÁVEL</h1>
+<h2>O FUTURO DO AGRO É SUSTENTÁVEL</h2>
 
 <p>
-Tecnologia, produção e preservação ambiental caminhando juntas.
+Tecnologia, inovação e preservação ambiental caminhando juntas
+para alimentar o mundo de forma consciente.
 </p>
 
-<a href="#sobre" class="btn">Explorar</a>
+<a href="#sobre" class="btn">Explorar o Futuro</a>
 
 </div>
 
@@ -49,28 +57,49 @@ Tecnologia, produção e preservação ambiental caminhando juntas.
 
 <section id="sobre" class="section">
 
-<h2>Sobre o Projeto</h2>
+<h2>Sobre o Agro Sustentável</h2>
 
+<div class="cards">
+
+<div class="card">
+<i class="fa-solid fa-seedling"></i>
+<h3>Agricultura Sustentável</h3>
 <p>
-O agro sustentável busca produzir alimentos de forma eficiente,
-preservando os recursos naturais e protegendo o meio ambiente.
-Tecnologias inteligentes ajudam a reduzir desperdícios e aumentar
-a produtividade no campo.
+A agricultura sustentável busca produzir alimentos preservando os recursos naturais e protegendo o meio ambiente.
 </p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-water"></i>
+<h3>Economia de Água</h3>
+<p>
+Sistemas inteligentes de irrigação ajudam a reduzir desperdícios e preservar a água.
+</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-leaf"></i>
+<h3>Preservação Ambiental</h3>
+<p>
+A proteção das florestas, rios e biodiversidade garante um futuro melhor para todos.
+</p>
+</div>
+
+</div>
 
 </section>
 
-<section id="tecnologia" class="section cards">
+<section id="tecnologias" class="section dark">
 
-<h2>Tecnologias no Campo</h2>
+<h2>Tecnologias do Futuro</h2>
 
-<div class="container">
+<div class="cards">
 
 <div class="card">
 <i class="fa-solid fa-drone"></i>
 <h3>Drones Agrícolas</h3>
 <p>
-Monitoramento das plantações e redução do uso de pesticidas.
+Monitoram plantações, detectam pragas e ajudam na aplicação eficiente de insumos.
 </p>
 </div>
 
@@ -78,7 +107,7 @@ Monitoramento das plantações e redução do uso de pesticidas.
 <i class="fa-solid fa-robot"></i>
 <h3>Inteligência Artificial</h3>
 <p>
-Sensores e IA ajudam produtores a economizar água e energia.
+A IA analisa dados climáticos e melhora a produtividade reduzindo impactos ambientais.
 </p>
 </div>
 
@@ -86,7 +115,15 @@ Sensores e IA ajudam produtores a economizar água e energia.
 <i class="fa-solid fa-solar-panel"></i>
 <h3>Energia Solar</h3>
 <p>
-Fazendas sustentáveis utilizam energia limpa e renovável.
+Fontes renováveis ajudam fazendas a produzirem energia limpa e sustentável.
+</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-satellite"></i>
+<h3>Monitoramento Climático</h3>
+<p>
+Sensores inteligentes ajudam produtores a prever mudanças no clima.
 </p>
 </div>
 
@@ -96,78 +133,107 @@ Fazendas sustentáveis utilizam energia limpa e renovável.
 
 <section id="sustentabilidade" class="section green">
 
-<h2>Sustentabilidade</h2>
+<h2>Sustentabilidade e Meio Ambiente</h2>
 
-<p>
-A agricultura moderna precisa equilibrar produção e preservação.
-A irrigação inteligente, agricultura de precisão e uso consciente
-dos recursos naturais ajudam a proteger o planeta.
+<p class="text">
+O equilíbrio entre produção agrícola e preservação ambiental é essencial para garantir alimento às futuras gerações sem destruir os recursos naturais do planeta.
 </p>
 
-<img
-src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200"
-alt="Campo sustentável"
-/>
+<div class="stats">
 
-</section>
+<div class="stat">
+<h3 class="counter" data-target="80">0</h3>
+<p>% Economia de Água</p>
+</div>
 
-<section id="videos" class="section">
+<div class="stat">
+<h3 class="counter" data-target="65">0</h3>
+<p>% Redução de Poluição</p>
+</div>
 
-<h2>Vídeo sobre Agro Sustentável</h2>
-
-<div class="video">
-
-<iframe
-width="100%"
-height="500"
-src="https://www.youtube.com/embed/2Vf-BfVoq4g"
-title="YouTube video"
-frameborder="0"
-allowfullscreen>
-</iframe>
+<div class="stat">
+<h3 class="counter" data-target="90">0</h3>
+<p>% Energia Renovável</p>
+</div>
 
 </div>
 
 </section>
 
-<section class="section gallery">
+<section id="galeria" class="section">
 
-<h2>Galeria do Futuro Agro</h2>
+<h2>Galeria do Agro do Futuro</h2>
 
-<div class="images">
+<div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
-<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399">
-<img src="https://images.unsplash.com/photo-1472396961693-142e6e269027">
+<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200">
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200">
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200">
+<img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1200">
 
 </div>
 
 </section>
 
-<section class="section articles">
+<section id="videos" class="section dark">
 
-<h2>Informações e Artigos</h2>
+<h2>Vídeos Educativos</h2>
+
+<div class="video-grid">
+
+<div class="video-card">
+<iframe src="https://www.youtube.com/embed/2Vf-BfVoq4g" allowfullscreen></iframe>
+</div>
+
+<div class="video-card">
+<iframe src="https://www.youtube.com/embed/EtW2rrLHs08" allowfullscreen></iframe>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Artigos e Informações</h2>
 
 <div class="article">
-
-<h3>Agricultura Digital</h3>
-
+<h3>Agricultura Inteligente</h3>
 <p>
-A agricultura digital utiliza sensores, inteligência artificial
-e internet das coisas para melhorar a produtividade e reduzir
-impactos ambientais.
+A agricultura inteligente utiliza sensores, internet das coisas e inteligência artificial para produzir mais utilizando menos recursos naturais.
 </p>
-
 </div>
 
 <div class="article">
-
 <h3>Produção Sustentável</h3>
-
 <p>
-O equilíbrio entre produção agrícola e conservação ambiental
-é fundamental para garantir alimento às futuras gerações.
+Novas tecnologias ajudam produtores a reduzir impactos ambientais e proteger o planeta.
 </p>
+</div>
+
+</section>
+
+<section id="quiz" class="section green">
+
+<h2>Quiz Sustentável</h2>
+
+<div class="quiz-box">
+
+<p id="question">
+Qual tecnologia ajuda a economizar água no campo?
+</p>
+
+<div class="answers">
+
+<button onclick="correct()">Irrigação Inteligente</button>
+
+<button onclick="wrong()">Desmatamento</button>
+
+<button onclick="wrong()">Queimadas</button>
+
+</div>
+
+<h3 id="result"></h3>
 
 </div>
 
@@ -175,8 +241,10 @@ O equilíbrio entre produção agrícola e conservação ambiental
 
 <footer>
 
+<h2>Projeto Agrinho 2026</h2>
+
 <p>
-Projeto desenvolvido para o Concurso Agrinho 2026
+Tecnologia e sustentabilidade construindo o futuro do agro.
 </p>
 
 </footer>
