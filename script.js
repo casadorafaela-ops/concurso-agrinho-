@@ -36,16 +36,28 @@ updateCounter();
 
 });
 
-function correct(){
+let score = 0;
 
-document.getElementById("result").innerHTML =
-"✅ Correto! A irrigação inteligente economiza água.";
+function correctGame(){
+
+document.getElementById("game-result").innerHTML =
+"✅ Excelente! Você protegeu o meio ambiente.";
+
+score += 10;
+
+document.getElementById("score").innerHTML = score;
 
 }
 
-function wrong(){
+function wrongGame(){
 
-document.getElementById("result").innerHTML =
-"❌ Resposta incorreta. Tente novamente.";
+document.getElementById("game-result").innerHTML =
+"❌ Essa ação prejudica a natureza.";
+
+if(score > 0){
+score -= 5;
+}
+
+document.getElementById("score").innerHTML = score;
 
 }
