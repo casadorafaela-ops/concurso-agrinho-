@@ -1,163 +1,394 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Agrinho 2026 - Festejando a Conexão Campo Cidade</title>
+<title>Agrinho 2026 | Agro Forte, Futuro Sustentável</title>
+
+<meta name="description"
+content="Projeto Agrinho 2026 - Agro Forte, Futuro Sustentável: Equilíbrio entre Produção e Meio Ambiente">
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 </head>
 
 <body>
 
+<!-- LOADER -->
+
+<div id="loader">
+
+<div class="loader-content">
+
+<h1>🌱 AGRINHO 2026</h1>
+
+<p>Carregando o futuro sustentável...</p>
+
+</div>
+
+</div>
+
+<!-- MENU -->
+
 <header>
+
+<div class="logo">
+
+🌱 AGRINHO 2026
+
+</div>
 
 <nav>
 
-<h1 class="logo">AGRINHO 2026</h1>
+<a href="#inicio">Início</a>
 
-<ul>
+<a href="#tecnologias">Tecnologias</a>
 
-<li><a href="#inicio">Início</a></li>
-<li><a href="#sobre">Sobre</a></li>
-<li><a href="#tecnologia">Tecnologia</a></li>
-<li><a href="#clima">Clima</a></li>
-<li><a href="#galeria">Galeria</a></li>
-<li><a href="#quiz">Quiz</a></li>
+<a href="#artigos">Artigos</a>
 
-</ul>
+<a href="#clima">Clima</a>
+
+<a href="#quiz">Quiz</a>
+
+<a href="#jogo">Jogo</a>
+
+<a href="#videos">Vídeos</a>
+
+<a href="#mapa">Mapa</a>
+
+<a href="#chatbot">IA</a>
 
 </nav>
 
-<section class="hero" id="inicio">
+<button id="darkModeBtn">
+🌙
+</button>
 
-<div class="hero-content">
+</header>
 
-<h2>Festejando a Conexão Campo Cidade</h2>
+<!-- HERO -->
+
+<section id="inicio" class="hero">
+
+<video autoplay muted loop playsinline>
+
+<source
+src="https://cdn.coverr.co/videos/coverr-aerial-view-of-farmland-1568782773670?download=1080p"
+type="video/mp4">
+
+</video>
+
+<div class="overlay">
+
+<h1>
+AGRO FORTE,
+FUTURO SUSTENTÁVEL
+</h1>
 
 <p>
-A união entre o campo e a cidade fortalece a economia,
-garante alimentos e constrói um futuro sustentável.
+
+Equilíbrio entre Produção e Meio Ambiente
+
 </p>
 
-<a href="#sobre" class="btn">
-Explorar Projeto
-</a>
+<button onclick="scrollToSection('tecnologias')">
+
+Explorar Inovações
+
+</button>
 
 </div>
 
 </section>
 
-</header>
+<!-- TECNOLOGIAS -->
 
-<section id="sobre" class="section">
+<section id="tecnologias">
 
-<h2>O Campo Alimenta o Mundo</h2>
-
-<p>
-O agronegócio é responsável pela produção de alimentos,
-fibras e energia que chegam diariamente às cidades.
-Com tecnologia e sustentabilidade, produtores rurais
-garantem alimentos de qualidade para milhões de pessoas.
-</p>
-
-</section>
-
-<section id="tecnologia" class="section dark">
-
-<h2>Tecnologias no Agro</h2>
+<h2>🚜 Tecnologias do Agro</h2>
 
 <div class="cards">
 
 <div class="card">
-<i class="fas fa-drone"></i>
-<h3>Drones</h3>
+
+<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854">
+
+<h3>Drones Agrícolas</h3>
+
 <p>
-Monitoramento inteligente das plantações.
+Monitoramento inteligente das lavouras.
 </p>
+
 </div>
 
 <div class="card">
-<i class="fas fa-robot"></i>
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+
 <h3>Inteligência Artificial</h3>
+
 <p>
-Análise climática e previsão de produtividade.
+Previsão de safras e combate a pragas.
 </p>
+
 </div>
 
 <div class="card">
-<i class="fas fa-solar-panel"></i>
+
+<img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
+
 <h3>Energia Solar</h3>
-<p>
-Energia limpa para fazendas sustentáveis.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="clima" class="section">
-
-<h2>Previsão do Tempo</h2>
-
-<div class="weather">
-
-<div class="weather-card">
-<h3>Temperatura</h3>
-<p id="temp">--°C</p>
-</div>
-
-<div class="weather-card">
-<h3>Umidade</h3>
-<p id="humidity">--%</p>
-</div>
-
-<div class="weather-card">
-<h3>Clima</h3>
-<p id="weather">Carregando...</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="quiz" class="section green">
-
-<h2>Quiz Agrinho</h2>
 
 <p>
-Qual atitude ajuda a preservar a água?
+Sustentabilidade energética no campo.
 </p>
 
-<button onclick="correta()">
-Irrigação Inteligente
-</button>
+</div>
 
-<button onclick="errada()">
-Desperdício
-</button>
+<div class="card">
 
-<button onclick="errada()">
-Poluição
-</button>
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399">
 
-<h3 id="resultado"></h3>
+<h3>Internet das Coisas</h3>
 
-<h2>Pontos: <span id="score">0</span></h2>
+<p>
+Sensores monitorando solo e irrigação.
+</p>
+
+</div>
+
+</div>
 
 </section>
+
+<!-- DASHBOARD -->
+
+<section id="dashboard">
+
+<h2>📊 Indicadores Sustentáveis</h2>
+
+<canvas id="graficoAgro"></canvas>
+
+</section>
+
+<!-- CLIMA -->
+
+<section id="clima">
+
+<h2>🌤 Clima em Tempo Real</h2>
+
+<div class="weather-box">
+
+<div id="cidade"></div>
+
+<div id="temperatura"></div>
+
+<div id="umidade"></div>
+
+<div id="vento"></div>
+
+<div id="descricao"></div>
+
+<div id="hora"></div>
+
+<div id="data"></div>
+
+<div id="estacao"></div>
+
+</div>
+
+</section>
+
+<!-- ARTIGOS -->
+
+<section id="artigos">
+
+<h2>📚 Artigos Científicos</h2>
+
+<div id="artigosContainer">
+
+<div class="artigo">
+
+<h3>
+Agricultura de Precisão e Sustentabilidade
+</h3>
+
+<p>
+Uso de sensores, drones e IA para reduzir desperdícios.
+</p>
+
+</div>
+
+<div class="artigo">
+
+<h3>
+Conservação do Solo
+</h3>
+
+<p>
+Práticas modernas para aumentar a produtividade.
+</p>
+
+</div>
+
+<div class="artigo">
+
+<h3>
+Agroflorestas
+</h3>
+
+<p>
+Integração entre agricultura e preservação ambiental.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- QUIZ -->
+
+<section id="quiz">
+
+<h2>🧠 Quiz do Agro</h2>
+
+<div id="quiz-container">
+
+<p id="pergunta"></p>
+
+<div id="respostas"></div>
+
+</div>
+
+</section>
+
+<!-- JOGO -->
+
+<section id="jogo">
+
+<h2>🌳 Jogo: Plante Árvores</h2>
+
+<canvas
+id="gameCanvas"
+width="800"
+height="400">
+</canvas>
+
+<p>
+Clique para plantar árvores.
+</p>
+
+</section>
+
+<!-- VÍDEOS -->
+
+<section id="videos">
+
+<h2>🎥 Vídeos Educativos</h2>
+
+<div class="video-grid">
+
+<iframe
+src="https://www.youtube.com/embed/8h7K8M4dY5M"
+allowfullscreen>
+</iframe>
+
+<iframe
+src="https://www.youtube.com/embed/R2Q5sL9L4K4"
+allowfullscreen>
+</iframe>
+
+<iframe
+src="https://www.youtube.com/embed/nyz5J9qV6sI"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+<!-- MAPA -->
+
+<section id="mapa">
+
+<h2>🗺 Agricultura e Meio Ambiente</h2>
+
+<div id="map"></div>
+
+</section>
+
+<!-- CURIOSIDADES -->
+
+<section id="curiosidades">
+
+<h2>💡 Curiosidades</h2>
+
+<div id="curiosidadeBox">
+
+Clique no botão para descobrir.
+
+</div>
+
+<button id="gerarCuriosidade">
+
+Gerar Curiosidade
+
+</button>
+
+</section>
+
+<!-- CHATBOT -->
+
+<section id="chatbot">
+
+<h2>🤖 AGRINHO IA</h2>
+
+<div class="chat">
+
+<div id="chat-box"></div>
+
+<input
+type="text"
+id="userInput"
+placeholder="Pergunte sobre tecnologia, agro ou sustentabilidade">
+
+<button onclick="enviarPergunta()">
+
+Enviar
+
+</button>
+
+</div>
+
+</section>
+
+<!-- RODAPÉ -->
 
 <footer>
 
+<h3>AGRINHO 2026</h3>
+
 <p>
-Projeto Agrinho 2026
+Agro Forte, Futuro Sustentável
+</p>
+
+<p>
+Projeto Educacional Interativo
 </p>
 
 </footer>
@@ -165,4 +396,5 @@ Projeto Agrinho 2026
 <script src="script.js"></script>
 
 </body>
+
 </html>
